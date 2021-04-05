@@ -2,9 +2,9 @@
 
 namespace Bangnokia\CdnImage\Tests;
 
+use Bangnokia\CdnImage\CdnImageServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Bangnokia\CdnImage\CdnImageServiceProvider;
 
 class TestCase extends Orchestra
 {

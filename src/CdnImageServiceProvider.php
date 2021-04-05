@@ -2,9 +2,9 @@
 
 namespace Bangnokia\CdnImage;
 
+use Bangnokia\CdnImage\Commands\CdnImageCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Bangnokia\CdnImage\Commands\CdnImageCommand;
 
 class CdnImageServiceProvider extends PackageServiceProvider
 {
