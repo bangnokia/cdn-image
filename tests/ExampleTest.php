@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Bangnokia\CdnImage\Tests;
 
 class ExampleTest extends TestCase
 {
