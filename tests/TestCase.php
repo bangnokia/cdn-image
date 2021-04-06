@@ -3,7 +3,6 @@
 namespace Bangnokia\CdnImage\Tests;
 
 use Bangnokia\CdnImage\CdnImageServiceProvider;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Orchestra\Testbench\TestCase as Orchestra;
 
