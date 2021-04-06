@@ -15,6 +15,10 @@ class ImgComponentTest extends TestCase
 
     public function test_src_prop_is_required()
     {
+        if (version_compare($this->app->version(), '8.0', '>')) {
+            $this->markTestSkipped('Skip for Laravel 7');
+        }
+
         $this->expectException(ViewException::class);
 
         $this->blade('<x-img src="" alt="aaaaaa" />');
