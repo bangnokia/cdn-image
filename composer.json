@@ -28,13 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Bangnokia\\CdnImage\\": "src",
-            "Bangnokia\\CdnImage\\Database\\Factories\\": "database/factories"
+            "BangNokia\\CdnImage\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bangnokia\\CdnImage\\Tests\\": "tests"
+            "BangNokia\\CdnImage\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Bangnokia\\CdnImage\\CdnImageServiceProvider"
+                "BangNokia\\CdnImage\\CdnImageServiceProvider"
             ],
             "aliases": {
-                "CdnImage": "Bangnokia\\CdnImage\\CdnImageFacade"
+                "CdnImage": "BangNokia\\CdnImage\\CdnImageFacade"
             }
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bangnokia\CdnImage;
+namespace BangNokia\CdnImage;
 
 use Illuminate\Support\Facades\Facade;
 

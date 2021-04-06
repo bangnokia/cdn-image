@@ -1,8 +1,8 @@
 <?php
 
-namespace Bangnokia\CdnImage;
+namespace BangNokia\CdnImage;
 
-use Bangnokia\CdnImage\Components\Img;
+use BangNokia\CdnImage\Components\Img;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

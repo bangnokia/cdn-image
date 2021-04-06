@@ -1,8 +1,8 @@
 <?php
 
-namespace Bangnokia\CdnImage\Tests;
+namespace BangNokia\CdnImage\Tests;
 
-use Bangnokia\CdnImage\CdnImageServiceProvider;
+use BangNokia\CdnImage\CdnImageServiceProvider;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Orchestra\Testbench\TestCase as Orchestra;
 
