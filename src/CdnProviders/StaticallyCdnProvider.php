@@ -3,7 +3,6 @@
 
 namespace BangNokia\CdnImage\CdnProviders;
 
-
 use BangNokia\CdnImage\Contracts\CdnProvider;
 use Illuminate\Support\Str;
 
@@ -17,11 +16,11 @@ class StaticallyCdnProvider implements CdnProvider
 
         $operations = collect(array_merge($options, [
             'w' => $width,
-            'h' => $height
+            'h' => $height,
         ]))->filter();
 
         if ($operations->isNotEmpty()) {
-            $cdnUrl .= '/'.$operations->map(fn($value, $key) => $key.'='.$value)->join(',');
+            $cdnUrl .= '/'.$operations->map(fn ($value, $key) => $key.'='.$value)->join(',');
         }
 
         return $cdnUrl.Str::start($path, '/');

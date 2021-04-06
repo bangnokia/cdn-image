@@ -3,8 +3,8 @@
 namespace BangNokia\CdnImage\Components;
 
 use BangNokia\CdnImage\CdnProviderFactory;
-use Illuminate\View\Component;
 use BangNokia\CdnImage\Contracts\CdnProvider;
+use Illuminate\View\Component;
 
 class Img extends Component
 {
@@ -40,7 +40,7 @@ class Img extends Component
         $this->makeCdnUrl();
 
         return view('cdn-image::img', [
-            'cdnUrl' => $this->makeCdnUrl()
+            'cdnUrl' => $this->makeCdnUrl(),
         ]);
     }
 }
