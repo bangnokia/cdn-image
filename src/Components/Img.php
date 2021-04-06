@@ -53,6 +53,9 @@ class Img extends Component
         return collect($filters)->filter();
     }
 
+    /**
+     * @return \Illuminate\View\View|\Closure|string
+     */
     public function render()
     {
         $this->makeCdnUrl();
