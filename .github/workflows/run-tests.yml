@@ -8,10 +8,10 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-dist, windows-latest]
+        os: [ubuntu-latest, windows-latest]
         php: [8.0]
         laravel: [8.*]
-        stability: [prefer-latest, prefer-stable]
+        stability: [prefer-dist, prefer-stable]
         include:
           - laravel: 8.*
             testbench: 6.*
