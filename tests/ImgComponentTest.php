@@ -20,7 +20,6 @@ class ImgComponentTest extends TestCase
         $this->blade('<x-img src="" alt="aaaaaa" />');
     }
 
-
     public function test_it_can_accept_attributes()
     {
         $view = $this->blade('<x-img src="http://github.com/lmao.jpg" name="foo" alt="bar"/>');
