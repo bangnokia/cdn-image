@@ -16,12 +16,6 @@ You can install the package via composer:
 composer require bangnokia/cdn-image
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --provider="Bangnokia\CdnImage\CdnImageServiceProvider" --tag="cdn_image-migrations"
-php artisan migrate
-```
 
 You can publish the config file with:
 ```bash
