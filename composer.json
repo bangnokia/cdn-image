@@ -1,12 +1,11 @@
 {
     "name": "bangnokia/cdn_image",
-    "description": "using cdn for images on the website",
+    "description": "Using cdn for images on the website",
     "keywords": [
-        "BangNokia",
         "laravel",
-        "cdn_image"
+        "cdn-image"
     ],
-    "homepage": "https://github.com/bangnokia/cdn_image",
+    "homepage": "https://github.com/bangnokia/cdn-image",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +17,7 @@
     "require": {
         "php": "^7.4|^8.0",
         "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.0"
+        "illuminate/contracts": "^7.4|^8.0"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
