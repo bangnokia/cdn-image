@@ -30,7 +30,7 @@ class Img extends Component
         $filters = $this->makeFilter();
 
         if ($filters->isNotEmpty()) {
-            $this->cdnUrl .= '/'.collect($filters)->map(fn($value, $key) => $key.'='.$value)->join(',');
+            $this->cdnUrl .= '/'.collect($filters)->map(fn ($value, $key) => $key.'='.$value)->join(',');
         }
 
         $this->cdnUrl .= Str::start($path, '/');
@@ -58,7 +58,7 @@ class Img extends Component
         $this->makeCdnUrl();
 
         return view('cdn-image::img', [
-            'cdnUrl' => $this->cdnUrl
+            'cdnUrl' => $this->cdnUrl,
         ]);
     }
 }
