@@ -3,7 +3,6 @@
 namespace BangNokia\CdnImage\Tests;
 
 use BangNokia\CdnImage\CdnImageServiceProvider;
-use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
