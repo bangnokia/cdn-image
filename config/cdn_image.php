@@ -1,16 +1,17 @@
 <?php
 
 return [
-    // Default service
     'default' => 'statically',
 
     'services' => [
-        // Statically is the free cdn, so we dont have to config any api key here
         'statically' => [
-            'url' => 'https://cdn.statically.io'
+            'domain' => 'cdn.statically.io'
         ],
 
-        // Cloudimge wip
-        'cloudimage' => []
+        'cloud_image' => [
+            'domain'  => 'cloudimg.io',
+            'token'   => env('CLOUD_IMAGE_TOKEN'),
+            'version' => env('CLOUD_IMAGE_VERSION', 'v7')
+        ]
     ]
 ];

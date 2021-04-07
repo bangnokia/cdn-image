@@ -18,14 +18,15 @@ class Img extends Component
 
     protected CdnProvider $provider;
 
-    public function __construct(string $src, string $width = null, string $height = null)
+    public function __construct(string $src, string $width = null, string $height = null, array $query = [])
     {
         $this->src = $src;
         $this->width = $width;
         $this->height = $height;
+        $this->query = $query;
     }
 
-    protected function makeCdnUrl()
+    protected function makeCdnUrl(): string
     {
         $cdnProvider = CdnProviderFactory::makeProvider(config('cdn_image.default'));
 

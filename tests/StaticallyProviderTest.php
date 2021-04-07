@@ -2,7 +2,7 @@
 
 namespace BangNokia\CdnImage\Tests;
 
-class ImgComponentWhenStaticallyProviderTest extends TestCase
+class StaticallyProviderTest extends TestCase
 {
     public function setUp(): void
     {
@@ -27,5 +27,14 @@ class ImgComponentWhenStaticallyProviderTest extends TestCase
         $view = $this->blade('<x-img src="http://github.com/lmao.jpg" width="100" />');
 
         $view->assertSee('<img src="https://cdn.statically.io/img/github.com/w=100/lmao.jpg" >', false);
+    }
+
+    public function test_we_dont_have_to_update_code_when_domain_changing()
+    {
+        config(['cdn_image.services.statically.domain' => 'foo.bar']);
+
+        $view = $this->blade('<x-img src="http://github.com/lmao.jpg" />');
+
+        $view->assertSee('https://foo.bar/img/github.com/lmao.jpg');
     }
 }
