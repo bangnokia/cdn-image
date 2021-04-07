@@ -1,4 +1,4 @@
-# Laravel CDM image blade component
+# Laravel CDN image blade component
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/bangnokia/cdn-image.svg?style=flat-square)](https://packagist.org/packages/bangnokia/cdn-image)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/bangnokia/cdn-image/run-tests?label=tests)](https://github.com/bangnokia/cdn-image/actions?query=workflow%3ATests+branch%3Amaster)
