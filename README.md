@@ -1,4 +1,4 @@
-# Laravel image blade component using CDN
+# Laravel CDM image blade component
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/bangnokia/cdn-image.svg?style=flat-square)](https://packagist.org/packages/bangnokia/cdn-image)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/bangnokia/cdn-image/run-tests?label=tests)](https://github.com/bangnokia/cdn-image/actions?query=workflow%3ATests+branch%3Amaster)
@@ -6,10 +6,10 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/bangnokia/cdn-image.svg?style=flat-square)](https://packagist.org/packages/bangnokia/cdn-image)
 
 
-If your website is running and has lots of images which make it slow, you should swap to using a CDN for better user experience and some convenient operation CDN provider gives us like resize, filter, or event convert to webp, etc.
+If your website is running and has lots of images which make it slow, you should start to use a CDN for better speed beside with some convenient operations to manipulate image like resize, filter, convert to webp, etc...
 
 
-By default, this package supports [statically](https://statically.io/) (a free CDN service out of the box) using `img` functional.
+By default, this package supports [statically](https://statically.io/) (a free CDN service out of the box) using via `/img` endpoint.
 
 
 ## Installation
@@ -23,39 +23,27 @@ composer require bangnokia/cdn-image
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Bangnokia\CdnImage\CdnImageServiceProvider" --tag="cdn_image-config"
-```
-
-This is the contents of the published config file:
-
-```php
-<?php
-
-return [
-    // Default CDN provider
-    'default' => 'statically',
-
-    'providers' => [
-        // Statically is the free cdn, so we dont have to config any api key here
-        'statically' => [],
-    ]
-];
+php artisan vendor:publish --provider="BangNokia\CdnImage\CdnImageServiceProvider" --tag="cdn_image-config"
 ```
 
 ## Usage
 
-Component supports 3 most used props (at least I thought that):
+The blade `x-img` component supports 3 most used props (at least I thought that):
 
 - `src`
 - `width`
 - `height`
 
-Other options you should pass via `query` prop as array
+Other options you should pass via `query` prop as array, and they depend on the CDN provider.
  
-```php
-<x-img src="http://foo.bar/demo.jpg" width="200" height="100" :query="[]" />
+Example
+```html
+<x-img src="http://foo.bar/demo.jpg" width="200" height="100" :query="['q' => 90']" />
 ```
-
+will be rendered to
+```html
+<img src="htts://statically.io/img/foo.bar/w=200,h=100,q=90/demo.jpg" >
+```
 ## Testing
 
 ```bash
