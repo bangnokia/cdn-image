@@ -30,4 +30,8 @@ class ImgComponentTest extends TestCase
 
         $view->assertSee('<img src="https://cdn.statically.io/img/github.com/lmao.jpg" name="foo" alt="bar">', false);
     }
+
+    public function test_it_can_use_raw_url_in_local_environment()
+    {
+    }
 }

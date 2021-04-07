@@ -3,6 +3,9 @@
 return [
     'default' => 'statically',
 
+    // If this option set to true, it will try to
+    'force_cdn' => false,
+
     'services' => [
         'statically' => [
             'domain' => 'cdn.statically.io'
