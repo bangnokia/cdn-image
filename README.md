@@ -20,11 +20,17 @@ You can install the package via composer:
 composer require bangnokia/cdn-image
 ```
 
-
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="BangNokia\CdnImage\CdnImageServiceProvider" --tag="cdn_image-config"
+php artisan vendor:publish --provider="BangNokia\CdnImage\CdnImageServiceProvider" --tag="cdn-image-config"
 ```
+
+Now you should value for provider you are using in `config/cdn_image.php` config file.
+
+### CDN Providers supported
+
+- [Statically](https://statically.io/)
+- [Cloudimage](https://www.cloudimage.io/en/home)
 
 ## Usage
 
