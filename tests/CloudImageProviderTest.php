@@ -16,10 +16,10 @@ class CloudImageProviderTest extends TestCase
 
         config([
             'cdn_image.services.cloud_image' => [
-                'domain'  => 'cloudimg.test',
-                'token'   => 'test_token',
-                'version' => 'v9'
-            ]
+                'domain' => 'cloudimg.test',
+                'token' => 'test_token',
+                'version' => 'v9',
+            ],
         ]);
     }
 
@@ -46,10 +46,11 @@ class CloudImageProviderTest extends TestCase
 
     public function test_it_can_do_some_operations()
     {
-        $view = $this->blade(<<<EOF
+        $view = $this->blade(
+            <<<EOF
 <x-img src="http://github.com/foo.jpg" :query="['contrast' => 10, 'func' => 'crop']" />
 EOF
-);
+        );
 
         $cloudUrl = $this->cloudUrl('http://github.com/foo.jpg');
         $view->assertSee("<img src=\"$cloudUrl?contrast=10&amp;func=crop\" >", false);

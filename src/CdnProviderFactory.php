@@ -16,6 +16,7 @@ class CdnProviderFactory
                 return new StaticallyCdnProvider(config('cdn_image.services.statically.domain'));
             case 'cloud_image':
                 ['domain' => $domain, 'token' => $token, 'version' => $version] = config('cdn_image.services.cloud_image');
+
                 return new CloudImageCdnProvider($domain, $token, $version);
         }
 

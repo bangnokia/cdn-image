@@ -28,8 +28,8 @@ class CloudImageCdnProvider implements CdnProvider
     public function makeUrl(string $originalUrl, ?string $width, ?string $height, array $options = []): string
     {
         $operations = collect(array_merge($options, [
-            'width'  => $width,
-            'height' => $height
+            'width' => $width,
+            'height' => $height,
         ]))->filter();
 
         return $this->cloudUrl(
