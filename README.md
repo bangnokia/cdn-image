@@ -5,9 +5,12 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/bangnokia/cdn-image/Check%20&%20fix%20styling?label=code%20style)](https://github.com/bangnokia/cdn-image/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/bangnokia/cdn-image.svg?style=flat-square)](https://packagist.org/packages/bangnokia/cdn-image)
 
+
 If your website is running and has lots of images which make it slow, you should swap to using a CDN for better user experience and some convenient operation CDN provider gives us like resize, filter, or event convert to webp, etc.
 
+
 By default, this package supports [statically](https://statically.io/) (a free CDN service out of the box) using `img` functional.
+
 
 ## Installation
 
