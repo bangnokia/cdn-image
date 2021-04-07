@@ -25,7 +25,29 @@ You can publish the config file with:
 php artisan vendor:publish --provider="BangNokia\CdnImage\CdnImageServiceProvider" --tag="cdn-image-config"
 ```
 
-Now you should value for provider you are using in `config/cdn_image.php` config file.
+Sample config file
+
+```php
+<?php
+
+return [
+    'default' => 'statically',
+
+    'services' => [
+        'statically' => [
+            'domain' => 'cdn.statically.io'
+        ],
+
+        'cloud_image' => [
+            'domain'  => 'cloudimg.io',
+            'token'   => env('CLOUD_IMAGE_TOKEN'),
+            'version' => env('CLOUD_IMAGE_VERSION', 'v7')
+        ]
+    ]
+];
+```
+
+Now you should value for the provider you are using in `config/cdn_image.php` config file.
 
 ### CDN Providers supported
 
@@ -40,7 +62,8 @@ The blade `x-img` component supports 3 most used props (at least I thought that)
 - `width`
 - `height`
 
-Other options you should pass via `query` prop as array, and they depend on the CDN provider.
+and 
+- `query` for other operations which depends on each provider
  
 Example
 ```html
