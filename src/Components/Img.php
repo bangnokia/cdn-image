@@ -2,8 +2,8 @@
 
 namespace BangNokia\CdnImage\Components;
 
-use BangNokia\CdnImage\CdnProviderFactory;
 use BangNokia\CdnImage\Contracts\CdnProvider;
+use BangNokia\CdnImage\UrlMaker;
 use Illuminate\View\Component;
 
 class Img extends Component
@@ -28,9 +28,7 @@ class Img extends Component
 
     protected function makeCdnUrl(): string
     {
-        $cdnProvider = CdnProviderFactory::makeProvider(config('cdn_image.default'));
-
-        return $cdnProvider->makeUrl($this->src, $this->width, $this->height, $this->query);
+        return UrlMaker::make($this->src, $this->width, $this->height, $this->query);
     }
 
     /**
