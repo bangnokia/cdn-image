@@ -34,7 +34,7 @@ class ImgComponentTest extends TestCase
     public function test_it_can_use_raw_url_in_local_environment()
     {
         config(['cdn_image.force_cdn' => false]);
-        $this->app->detectEnvironment(fn() => 'local');
+        $this->app->detectEnvironment(fn () => 'local');
 
         $view = $this->blade('<x-img src="http://localhost/test.jpg" />');
         $view->assertSee('<img src="http://localhost/test.jpg" >', false);
