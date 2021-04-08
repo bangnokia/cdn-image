@@ -18,7 +18,7 @@ class UrlMaker
      */
     public static function make(string $src, ?string $width, ?string $height, array $options = []): string
     {
-        if (!config('cdn_image.force_cdn') && app()->isLocal() && Str::of($src)->startsWith(config('app.url'))) {
+        if (! config('cdn_image.force_cdn') && app()->isLocal() && Str::of($src)->startsWith(config('app.url'))) {
             return $src;
         }
 

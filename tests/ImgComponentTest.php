@@ -46,7 +46,7 @@ class ImgComponentTest extends TestCase
     public function test_it_can_force_use_cdn_in_local_environment()
     {
         config(['cdn_image.force_cdn' => true]);
-        $this->app->detectEnvironment(fn() => 'local');
+        $this->app->detectEnvironment(fn () => 'local');
 
         $view = $this->blade('<x-img src="http://localhost/test.jpg" />');
         $view->assertDontSee('<img src="http://localhost/test.jpg" >', false);
