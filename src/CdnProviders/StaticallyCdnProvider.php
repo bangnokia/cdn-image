@@ -26,10 +26,7 @@ class StaticallyCdnProvider implements CdnProvider
             'h' => $height,
         ]))->filter();
 
-        if ($operations->isNotEmpty()) {
-            $cdnUrl .= '/'.$operations->map(fn ($value, $key) => $key.'='.$value)->join(',');
-        }
-
-        return $cdnUrl.Str::start($path, '/');
+        return $cdnUrl.Str::start($path, '/')
+            .($operations->isNotEmpty() ? '?'.http_build_query($operations->toArray()) : null);
     }
 }
