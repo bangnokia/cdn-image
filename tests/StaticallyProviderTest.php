@@ -22,11 +22,11 @@ class StaticallyProviderTest extends TestCase
     {
         $view = $this->blade('<x-img src="http://github.com/lmao.jpg" width="200" height="100" />');
 
-        $view->assertSee('<img src="https://cdn.statically.io/img/github.com/w=200,h=100/lmao.jpg" >', false);
+        $view->assertSee('<img src="https://cdn.statically.io/img/github.com/lmao.jpg?w=200&amp;h=100" >', false);
 
         $view = $this->blade('<x-img src="http://github.com/lmao.jpg" width="100" />');
 
-        $view->assertSee('<img src="https://cdn.statically.io/img/github.com/w=100/lmao.jpg" >', false);
+        $view->assertSee('<img src="https://cdn.statically.io/img/github.com/lmao.jpg?w=100" >', false);
     }
 
     public function test_we_dont_have_to_update_code_when_domain_changing()
