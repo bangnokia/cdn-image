@@ -71,7 +71,7 @@ Example
 ```
 will be rendered to
 ```html
-<img src="htts://statically.io/img/foo.bar/w=200,h=100,q=90/demo.jpg" >
+<img src="htts://statically.io/img/foo.bar/demo.jpg?w=200&h=100&q=90" >
 ```
 ## Testing
 
