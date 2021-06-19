@@ -17,7 +17,7 @@ class StaticallyCdnProvider implements CdnProvider
 
     public function makeUrl(string $originalUrl, ?string $width, ?string $height, array $options = []): string
     {
-        $parts = parse_url($originalIUrl);
+        $parts = parse_url($originalUrl);
 
         $path = $parts['path'];
         $host = $parts['host'] ?? null;
