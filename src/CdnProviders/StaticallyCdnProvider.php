@@ -17,7 +17,14 @@ class StaticallyCdnProvider implements CdnProvider
 
     public function makeUrl(string $originalUrl, ?string $width, ?string $height, array $options = []): string
     {
-        ['host' => $host, 'path' => $path] = parse_url($originalUrl);
+        $parts = parse_url($originalIUrl);
+
+        $path = $parts['path'];
+        $host = $parts['host'] ?? null;
+
+        if (! $host) {
+            return $originalUrl;
+        }
 
         $cdnUrl = "https://{$this->domain}/img/{$host}";
 
